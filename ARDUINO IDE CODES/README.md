@@ -7,10 +7,15 @@ This project uses an Arduino Uno and an ESP8266 module to monitor soil moisture 
  <summary>Components Used</summary>
 
 - Arduino Uno
+  
 - ESP8266 Wi-Fi module
+  
 - Soil Moisture Sensor
+  
 - Relay Module
+  
 - Jumper Wires
+  
 - Water Pump
 
 </details>
@@ -21,7 +26,9 @@ This project uses an Arduino Uno and an ESP8266 module to monitor soil moisture 
 Soil Moisture Sensor:
 
 VCC to 3.3V or 5V on the Arduino
+
 GND to GND on the Arduino
+
 Analog output to A0 on the Arduino
 
 Connect the water pump to the relay module according to the relay's specifications.
@@ -32,7 +39,9 @@ Connect the water pump to the relay module according to the relay's specificatio
   <summary>Relay Module</summary>
 
 VCC to 5V on the Arduino
+
 GND to GND on the Arduino
+
 IN to pin 8 on the Arduino
 
 </details>
@@ -41,9 +50,13 @@ IN to pin 8 on the Arduino
   <summary>ESP8266 Wi-Fi Module</summary>
 
 VCC to 3.3V (Note: Ensure the ESP8266 is powered by a 3.3V regulator)
+
 GND to GND on the Arduino
+
 RX to pin 1 (TX) on the Arduino (use a voltage divider if needed)
+
 TX to pin 0 (RX) on the Arduino
+
 </details>
 
 <details>
@@ -63,15 +76,21 @@ Connect the Arduino Uno: Use a USB cable to connect your Arduino Uno to your com
 Upload the Code:
 
 Open the Arduino IDE.
+
 Copy the provided code into a new sketch.
+
 Select your board and port from the Tools menu.
+
 Click the Upload button to upload the code to the Arduino.
+
 Wiring: Connect the components as described in the "Connections" section.
 
 Run the System:
 
 Open the Serial Monitor in the Arduino IDE to see the soil moisture values being read and the HTTP responses.
+
 The water pump will turn on if the soil moisture level is below the threshold (300 in this case).
+
 The ESP8266 module will send the soil moisture data to the specified server endpoint.
 
 </details>
